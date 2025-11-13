@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Roboto:wght@400;500&display=swap');
+
+/* Screen container */
+.screen-89-8 {
+  position: relative;
+  width: 414px;
+  height: 896px;
+  background-color: var(--style-0-bg);
+  border-radius: var(--style-0-radius);
+  overflow: hidden;
+}
+
+/* Z-index stacking per YAML order */
+.el-91-12  { position: absolute; left: 109px; top: 576px; width: 195px; height: 27px; z-index: 1; }
+.el-111-12 { position: absolute; left: 32px;  top: 283px; width: 350px; height: 286.73077392578125px; z-index: 2; }
+.el-125-51 { position: absolute; left: 24px;  top: 47px;  width: 115px; height: 59px; z-index: 3; }
+.el-125-52 { position: absolute; left: 339px; top: 51px;  width: 50px;  height: 50px; background-color: var(--style-6-bg); border-radius: var(--style-6-radius); z-index: 4; }
+.el-125-53 { position: absolute; left: 352px; top: 64px;  width: 24px;  height: 24px; z-index: 5; }
+.el-125-54 { position: absolute; left: 268px; top: 51px;  width: 50px;  height: 50px; background-color: var(--style-6-bg); border-radius: var(--style-6-radius); z-index: 6; }
+.el-125-55 { position: absolute; left: 281px; top: 64px;  width: 24px;  height: 24px; z-index: 7; }
+.el-89-29  { position: absolute; left: 309px; top: 777px; width: 70px;  height: 70px; background-color: var(--style-39-bg); border-radius: 50%; box-shadow: var(--style-39-shadow-0), var(--style-39-shadow-1); z-index: 8; }
+.el-115-17 { position: absolute; left: 320px; top: 788px; width: 48px;  height: 48px; z-index: 9; }
+
+/* Text typography bindings */
+.el-91-12 span { display: block; font-family: var(--typo-15-family); font-size: var(--typo-15-size); font-weight: var(--typo-15-weight); line-height: var(--typo-15-line-height); letter-spacing: var(--typo-15-letter-spacing); text-align: var(--typo-15-text-align); color: var(--typo-15-color); }
+.el-125-51 span { display: block; font-family: var(--typo-14-family); font-size: var(--typo-14-size); font-weight: var(--typo-14-weight); line-height: var(--typo-14-line-height); letter-spacing: var(--typo-14-letter-spacing); text-align: var(--typo-14-text-align); color: var(--typo-14-color); }
+
+/* Image and icon helpers */
+.icon-img { width: 100%; height: 100%; image-rendering: -webkit-optimize-contrast; object-fit: contain; display: block; }
+.image-cover { width: 100%; height: 100%; object-fit: cover; display: block; }

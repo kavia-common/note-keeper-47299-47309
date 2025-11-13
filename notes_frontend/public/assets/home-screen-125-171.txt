@@ -1,0 +1,182 @@
+Observations and calculations for Home Screen (screen_125:171)
+
+Screen
+- Name: Home Screen
+- Output filenames: 
+  - HTML: assets/home-screen-125-171.html
+  - CSS: assets/home-screen-125-171.css
+  - Common CSS: assets/common.css
+  - JS: assets/app.js
+- Dimensions (screen container): width=414.0px, height=1100.0px
+- Background: color_ref color_252525 → hex #252525 → var(--color-252525)
+- Root frame coordinates: x=1602.0, y=-823.0
+- Container behavior: position: relative; overflow: hidden; border-radius from style_0 (30px)
+
+Design system tokens to use as CSS variables
+- Colors: 
+  color_252525 #252525, color_ff9e9e #ff9e9e, color_000000 #000000, color_91f48f #91f48f, color_fff599 #fff599, color_ffffff #ffffff, color_3b3b3b #3b3b3b, color_9effff #9effff, color_b69cff #b69cff, color_fd99ff #fd99ff, color_ff0000 #ff0000, color_c4c4c4 #c4c4c4, color_cfcfcf #cfcfcf, color_9a9a9a #9a9a9a, color_263238 #263238, color_d4d6d7 #d4d6d7, color_7f8a8e #7f8a8e, color_3b464c #3b464c, color_4fb6b2 #4fb6b2, color_d0d0d0 #d0d0d0, color_606060 #606060, color_30be71 #30be71, color_cccccc #cccccc, color_f4f5d5 #f4f5d5
+- Typography:
+  typo_13: Nunito 25px/34.1px weight 400 color color_000000 (#000000) align left
+  typo_14: Nunito 43px/58.652px weight 600 color color_ffffff (#ffffff) align left
+- Styles:
+  style_0: background color_252525; border_radius 30
+  style_1: background color_ff9e9e; border_radius 10
+  style_2: background color_000000 (note: used as style ref on text nodes; does not override text color unless typography specifies)
+  style_3: background color_91f48f; border_radius 10
+  style_4: background color_fff599; border_radius 10
+  style_5: background color_ffffff
+  style_6: background color_3b3b3b; border_radius 15
+  style_7: background color_9effff; border_radius 10
+  style_8: background color_b69cff; border_radius 10
+  style_39: background color_252525; shadows shadow_0, shadow_1
+- Shadows:
+  shadow_0: drop shadow offset(-5px, 0px), blur 10px, color #000
+  shadow_1: drop shadow offset(0px, 5px), blur 10px, color #000
+- Spacing: Provide generic spacing variables (xs, sm, md, lg, xl) mapping to 4/8/16/24/32px
+
+Coordinate conversion (child_left = child.x - parent.x, child_top = child.y - parent.y)
+Parent/root: (x=1602, y=-823)
+
+Elements (in YAML order; later = higher z-index)
+1) Rectangle 8 (id 125:175) type rectangle style_1
+   Figma: x=1626, y=-680, w=365, h=157
+   Left = 1626 - 1602 = 24px
+   Top  = -680 - (-823) = 143px
+   width=365px, height=157px
+   Style: background var(--color-ff9e9e); border-radius 10px
+
+2) Text: "Book Review : The Design of Everyday Things by Don Norman" (id 125:176)
+   Figma: x=1671, y=-655, w=270, h=103
+   Left = 69px; Top=168px; width=270px; height=103px
+   Typography: typo_13 (Nunito 25px/34.1, color var(--color-000000), weight 400)
+
+3) Text: " " (id 125:177) (empty space text)
+   Figma: x=1671, y=-633, w=0, h=32
+   Left = 69px; Top=190px; width=0 (render minimal span or ignore width); height=32px
+   Typography: typo_13. This appears to be a placeholder; include but it will render nothing.
+
+4) Rectangle 11 (id 125:178) style_3
+   Figma: x=1626, y=-500, w=365, h=123
+   Left=24px; Top=323px; width=365px; height=123px
+   Background var(--color-91f48f); border-radius 10px
+
+5) Text: "Animes produced by Ufotable" (id 125:179)
+   Figma: x=1671, y=-471, w=254, h=64
+   Left=69px; Top=352px; width=254px; height=64px
+   Typography: typo_13
+
+6) Rectangle 10 (id 125:180) style_4
+   Figma: x=1626, y=-352, w=365, h=110
+   Left=24px; Top=471px; width=365px; height=110px
+   Background var(--color-fff599); border-radius 10px
+
+7) Text: "Mangas planned to read" (id 125:181)
+   Figma: x=1671, y=-329, w=259, h=67
+   Left=69px; Top=494px; width=259px; height=67px
+   Typography: typo_13
+
+8) Hero Text "Notes" (id 125:186)
+   Figma: x=1626, y=-776, w=115, h=59
+   Left=24px; Top=47px; width=115px; height=59px
+   Typography: typo_14 (Nunito 43px, weight 600, color var(--color-ffffff))
+
+9) Button 1 (id 125:187) type button (rectangle) style_6 with imagePath svg (icon background not used directly on rect; we create a rounded square and overlay separate icon instance 125:188)
+   Figma: x=1941, y=-772, w=50, h=50
+   Left=339px; Top=51px; width=50px; height=50px
+   Background var(--color-3b3b3b); border-radius 15px
+
+10) info_outline component (id 125:188)
+   Figma: x=1954, y=-759, w=24, h=24
+   Left=352px; Top=64px; width=24px; height=24px
+   Contains children:
+     - I125:188;8:7 Group (container same bounds)
+     - I125:188;8:8 Vector (no imagePath)
+     - I125:188;8:9 Vector (icon) with imagePath /assets/figmaimages/figma_image_125_188_8_9_6f275ea3.svg
+       For SVG: treat as icon; exact position relative to parent (but parent for component is root, so we place the 24x24 icon aligned)
+   We will render a single <img> for the component at 24x24 using its imagePath (figma_image_125_188_9cae0a35.svg) for crispness, and optionally could overlay nested vector, but using the provided component imagePath is accurate. Path in HTML: figmaimages/figma_image_125_188_9cae0a35.svg
+
+11) Button 4 (id 125:189) style_6
+   Figma: x=1870, y=-772, w=50, h=50
+   Left=268px; Top=51px
+   Background var(--color-3b3b3b); border-radius 15px
+
+12) search component (id 125:190)
+   Figma: x=1883, y=-759, w=24, h=24
+   Left=281px; Top=64px
+   Use component imagePath /assets/figmaimages/figma_image_125_190_7f05506b.svg
+   HTML path: figmaimages/figma_image_125_190_7f05506b.svg
+   Note: There is also nested vector with its own path; base instance image is sufficient.
+
+13) Rectangle 13 (id 136:37) style_7
+   Figma: x=1626, y=-217, w=365, h=120
+   Left=24px; Top=606px
+   Background var(--color-9effff); border-radius 10px
+
+14) Rectangle 9 (id 136:38) style_8
+   Figma: x=1626, y=-72, w=365, h=100
+   Left=24px; Top=751px
+   Background var(--color-b69cff); border-radius 10px
+
+15) Text: "Awesome tweets collection" (id 136:39)
+   Figma: x=1671, y=-191, w=287, h=68
+   Left=69px; Top=632px
+   Typography: typo_13
+
+16) Text: "List of free & open source apps" (id 136:40)
+   Figma: x=1671, y=-55, w=297, h=66
+   Left=69px; Top=768px
+   Typography: typo_13
+
+17) Ellipse 1 (id 125:191) style_39
+   Figma: x=1911, y=-46, w=70, h=70
+   Left=309px; Top=777px
+   Width=70px, Height=70px, border-radius: 50%
+   Background var(--color-252525)
+   Shadows: shadow_0 and shadow_1:
+     box-shadow: -5px 0 10px #000000, 0 5px 10px #000000
+
+18) add component (id 125:192)
+   Figma: x=1922, y=-35, w=48, h=48
+   Left=320px; Top=788px
+   Use instance imagePath /assets/figmaimages/figma_image_125_192_76848e5b.svg
+   HTML path: figmaimages/figma_image_125_192_76848e5b.svg
+
+Z-index stacking (1..n by order above); later items overlay earlier.
+
+Assets to include and paths
+- SVG icons (use simplified path figmaimages/<filename>):
+  - figma_image_125_187_523a2ccd.svg (not used directly; 125:187 is a button rectangle, icon shown by 125:188)
+  - figma_image_125_188_9cae0a35.svg (info component main)
+  - figma_image_125_188_8_9_6f275ea3.svg (vector inside info; optional)
+  - figma_image_125_190_7f05506b.svg (search component)
+  - figma_image_125_190_8_12_4c3aed59.svg (nested vector; optional)
+  - figma_image_125_192_76848e5b.svg (add component)
+  - figma_image_125_192_115_19_f22e454d.svg (nested vector; optional)
+- We will reference the component main imagePaths for crisp rendering.
+
+Typography application:
+- For all text nodes:
+  - Apply font-family, font-size, line-height, font-weight, text-align, and color using variables derived from design system (e.g., typo_13 and typo_14).
+- Load webfonts: Nunito via Google Fonts (weights 400 and 600).
+
+CSS variables in common.css:
+- Colors as --color-<key> with dashes (e.g., --color-252525)
+- Typography variables for all typo_0..typo_27: family, size(px), weight, line-height(px), text-align, color var(...) when provided
+- Styles: map style_0..style_40 with CSS variables for background-color, border-radius, border, opacity, and shadows tokens
+- Spacing tokens: --spacing-xs:4px; --spacing-sm:8px; --spacing-md:16px; --spacing-lg:24px; --spacing-xl:32px
+- Shadows: --shadow-0, --shadow-1, --shadow-2 strings for reuse
+
+Layout approach:
+- Root container: position: relative; width: 414px; height: 1100px; background var(--color-252525); border-radius 30px; overflow hidden
+- Each element: position: absolute with computed left/top, exact width/height, z-index incremental
+- Rectangles and ellipse rendered as <div> with backgrounds and radii
+- Components and icons rendered as <img> with exact sizes and absolute positioning; object-fit: contain; crisp edges for icons
+
+Interaction:
+- No interactions specified; app.js will be minimal stub
+
+Validation:
+- No negative CSS positions; all left/top derived are positive as computed.
+- Filenames all start with assets/ and placed at root assets/.
+- Image paths use figmaimages/<filename> as required by resolver.
+- Screen name 'Home Screen ' → "home-screen" (trimmed and hyphenized); screen id "125-171" (convert colon to hyphen) → final filename home-screen-125-171.*

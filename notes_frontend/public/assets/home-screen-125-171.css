@@ -1,0 +1,44 @@
+/* Home Screen (screen_125:171) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Roboto:wght@400;500&display=swap');
+
+.screen {
+  position: relative;
+  width: 414px;
+  height: 1100px;
+  background-color: var(--style-0-bg);
+  border-radius: var(--style-0-radius);
+  overflow: hidden;
+}
+
+/* Z-index stacking in YAML order */
+.el-125-175 { position: absolute; left: 24px; top: 143px; width: 365px; height: 157px; background-color: var(--style-1-bg); border-radius: var(--style-1-radius); z-index: 1; }
+.el-125-176 { position: absolute; left: 69px; top: 168px; width: 270px; height: 103px; z-index: 2; }
+.el-125-177 { position: absolute; left: 69px; top: 190px; width: 0px; height: 32px; z-index: 3; }
+.el-125-178 { position: absolute; left: 24px; top: 323px; width: 365px; height: 123px; background-color: var(--style-3-bg); border-radius: var(--style-3-radius); z-index: 4; }
+.el-125-179 { position: absolute; left: 69px; top: 352px; width: 254px; height: 64px; z-index: 5; }
+.el-125-180 { position: absolute; left: 24px; top: 471px; width: 365px; height: 110px; background-color: var(--style-4-bg); border-radius: var(--style-4-radius); z-index: 6; }
+.el-125-181 { position: absolute; left: 69px; top: 494px; width: 259px; height: 67px; z-index: 7; }
+.el-125-186 { position: absolute; left: 24px; top: 47px; width: 115px; height: 59px; z-index: 8; }
+.el-125-187 { position: absolute; left: 339px; top: 51px; width: 50px; height: 50px; background-color: var(--style-6-bg); border-radius: var(--style-6-radius); z-index: 9; }
+.el-125-188 { position: absolute; left: 352px; top: 64px; width: 24px; height: 24px; z-index: 10; }
+.el-125-189 { position: absolute; left: 268px; top: 51px; width: 50px; height: 50px; background-color: var(--style-6-bg); border-radius: var(--style-6-radius); z-index: 11; }
+.el-125-190 { position: absolute; left: 281px; top: 64px; width: 24px; height: 24px; z-index: 12; }
+.el-136-37  { position: absolute; left: 24px; top: 606px; width: 365px; height: 120px; background-color: var(--style-7-bg); border-radius: var(--style-7-radius); z-index: 13; }
+.el-136-38  { position: absolute; left: 24px; top: 751px; width: 365px; height: 100px; background-color: var(--style-8-bg); border-radius: var(--style-8-radius); z-index: 14; }
+.el-136-39  { position: absolute; left: 69px; top: 632px; width: 287px; height: 68px; z-index: 15; }
+.el-136-40  { position: absolute; left: 69px; top: 768px; width: 297px; height: 66px; z-index: 16; }
+.el-125-191 { position: absolute; left: 309px; top: 777px; width: 70px; height: 70px; background-color: var(--style-39-bg); border-radius: 50%; box-shadow: var(--style-39-shadow-0), var(--style-39-shadow-1); z-index: 17; }
+.el-125-192 { position: absolute; left: 320px; top: 788px; width: 48px; height: 48px; z-index: 18; }
+
+/* Text styling bindings */
+.el-125-176 span { display: block; }
+.el-125-179 span { display: block; }
+.el-125-181 span { display: block; }
+.el-136-39 span { display: block; }
+.el-136-40 span { display: block; }
+
+/* Icon images styling */
+.icon-img { width: 100%; height: 100%; image-rendering: -webkit-optimize-contrast; object-fit: contain; }
+
+/* Raster image default (if any in future) */
+.image-cover { width: 100%; height: 100%; object-fit: cover; display: block; }

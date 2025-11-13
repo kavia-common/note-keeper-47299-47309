@@ -1,0 +1,138 @@
+Observations and calculations for Home Screen Empty (screen_89:8)
+
+Screen
+- Name: Home Screen Empty
+- Output filenames:
+  - HTML: assets/home-screen-empty-89-8.html
+  - CSS: assets/home-screen-empty-89-8.css
+  - JS: assets/home-screen-empty-89-8.js
+  - Common CSS (already exists): assets/common.css
+- Dimensions (screen container): width=414.0px, height=896.0px
+- Background: color_ref color_252525 → hex #252525 → var(--color-252525)
+- Root frame coordinates: x=-1133.0, y=-1169.0
+- Root container style_ref: style_0 → background_color color_252525, border_radius: 30
+- Container behavior: position: relative; overflow: hidden; border-radius 30px
+
+Design system tokens to use as CSS variables (from figmafiles/design_system_T0002-47299-2N3kMjDHAmBJuagNnTMM54.json)
+- Colors:
+  color_252525 #252525, color_ffffff #ffffff, color_3b3b3b #3b3b3b
+  (others available but not directly used here)
+- Typography:
+  typo_14: Nunito 43px/58.6519966px weight 600 color color_ffffff align left
+  typo_15: Nunito 20px/27.2799988px weight 300 color color_ffffff align left
+- Styles:
+  style_0: background color_252525; border_radius 30
+  style_5: background color_ffffff
+  style_6: background color_3b3b3b; border_radius 15
+  style_39: background color_252525; shadows shadow_0, shadow_1
+- Shadows:
+  shadow_0: -5px 0px 10px #000000
+  shadow_1: 0px 5px 10px #000000
+
+Coordinate conversion
+Rule: child_left = child.x - parent.x; child_top = child.y - parent.y
+Parent/root: (x=-1133, y=-1169)
+
+Elements (YAML order; later = higher z-index):
+
+1) Text "Create your first note !" (id 91:12)
+   Figma: x=-1024, y=-593, w=195, h=27
+   Left = -1024 - (-1133) = 109px
+   Top  = -593 - (-1169) = 576px
+   Width=195px, Height=27px
+   Typography: typo_15 (Nunito 20/27.28, weight 300, color var(--color-ffffff))
+   style_ref: style_5 (background white) but for text we only apply typography color; no background specified in text node.
+   We will not add background for text; typography controls text rendering.
+
+2) Rectangle image "https://storyset.com/illustration/notebook/rafiki" (id 111:12)
+   Figma: x=-1101, y=-886, w=350, h=286.73077392578125
+   Left = -1101 - (-1133) = 32px
+   Top  = -886 - (-1169) = 283px
+   Width=350px, Height=286.73077392578125px
+   imagePath: /assets/figmaimages/figma_image_111_12.png → HTML src "figmaimages/figma_image_111_12.png"
+   Use <img> with object-fit: cover; absolute positioning; rounded corners not specified (no style_ref); so no radius.
+
+3) Hero Text "Notes" (id 125:51)
+   Figma: x=-1109, y=-1122, w=115, h=59
+   Left = -1109 - (-1133) = 24px
+   Top  = -1122 - (-1169) = 47px
+   Width=115px, Height=59px
+   Typography: typo_14 (Nunito 43px, weight 600, color var(--color-ffffff))
+
+4) Button 1 rectangle (id 125:52)
+   Figma: x=-794, y=-1118, w=50, h=50
+   Left = -794 - (-1133) = 339px
+   Top  = -1118 - (-1169) = 51px
+   Width=50px, Height=50px
+   style_ref: style_6 → background var(--color-3b3b3b), border-radius: 15px
+   imagePath exists (svg) but this is the background rectangle; icon is separate instance 125:53.
+
+5) info_outline component (id 125:53)
+   Figma: x=-781, y=-1105, w=24, h=24
+   Left = -781 - (-1133) = 352px
+   Top  = -1105 - (-1169) = 64px
+   Width=24px, Height=24px
+   imagePath: /assets/figmaimages/figma_image_125_53.svg → HTML src "figmaimages/figma_image_125_53.svg"
+   Children include nested vectors; we render the component's provided imagePath.
+
+6) Button 4 rectangle (id 125:54)
+   Figma: x=-865, y=-1118, w=50, h=50
+   Left = -865 - (-1133) = 268px
+   Top  = -1118 - (-1169) = 51px
+   Width=50px, Height=50px
+   style_ref: style_6 → background var(--color-3b3b3b), border-radius: 15px
+
+7) search component (id 125:55)
+   Figma: x=-852, y=-1105, w=24, h=24
+   Left = -852 - (-1133) = 281px
+   Top  = -1105 - (-1169) = 64px
+   Width=24px, Height=24px
+   imagePath: /assets/figmaimages/figma_image_125_55.svg → HTML src "figmaimages/figma_image_125_55.svg"
+
+8) Ellipse 1 (id 89:29)
+   Figma: x=-824, y=-392, w=70, h=70
+   Left = -824 - (-1133) = 309px
+   Top  = -392 - (-1169) = 777px
+   Width=70px, Height=70px, border-radius: 50%
+   style_ref: style_39 → background var(--color-252525); shadows: -5px 0 10px #000000, 0 5px 10px #000000
+
+9) add component (id 115:17)
+   Figma: x=-813, y=-381, w=48, h=48
+   Left = -813 - (-1133) = 320px
+   Top  = -381 - (-1169) = 788px
+   Width=48px, Height=48px
+   imagePath: /assets/figmaimages/figma_image_115_17.svg → HTML src "figmaimages/figma_image_115_17.svg"
+   Children include nested vector; component main imagePath is used.
+
+Z-index stacking (1..n by YAML order)
+1: 91:12 text
+2: 111:12 image
+3: 125:51 hero text
+4: 125:52 button rect
+5: 125:53 info icon
+6: 125:54 button rect
+7: 125:55 search icon
+8: 89:29 ellipse
+9: 115:17 add icon
+
+Layout approach:
+- Root container: position: relative; width: 414px; height: 896px; background var(--style-0-bg); border-radius 30px; overflow: hidden.
+- Absolutely position children using computed left/top; apply exact width/height.
+- Icons as <img> with object-fit: contain and crisp rendering.
+- Raster image uses object-fit: cover; exact sizes.
+
+Assets and paths:
+- PNG: figmaimages/figma_image_111_12.png
+- SVG icons:
+  - figmaimages/figma_image_125_53.svg (info_outline)
+  - figmaimages/figma_image_125_55.svg (search)
+  - figmaimages/figma_image_115_17.svg (add)
+Note: The YAML references paths with /assets/ prefix, but per requirements, HTML uses simplified "figmaimages/<filename>".
+
+Typography bindings:
+- typo_14 and typo_15 variables already present in assets/common.css with color variables bound (var(--typo-14-color), var(--typo-15-color)).
+
+Validation:
+- All left/top are positive after conversion.
+- All assets under assets/; file names sanitized: home-screen-empty-89-8.*
+- Include <script src="./app.js"></script> in HTML.
